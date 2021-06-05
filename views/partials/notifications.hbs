@@ -1,0 +1,27 @@
+<div id="notifications">
+    {{#each msgs}}
+    <div class="alert {{class}} alert-dismissible fade show">
+        {{msg}}
+        <button type="button" class="close" data-dismiss="alert"> &times;</button>
+    </div>
+    {{/each}}
+</div>
+
+<script>
+
+    //Set success alert
+    document.querySelectorAll('.alert-success').forEach(msg => {
+        setTimeout(() => {
+            msg.remove();
+        }, 5000)
+    })
+
+    //Set primary alert
+    document.querySelectorAll('.alert-primary').forEach(msg => {
+        setTimeout(() => {
+            msg.remove();
+        }, 1500)
+    })
+
+
+</script>

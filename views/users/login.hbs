@@ -1,0 +1,28 @@
+{{>navbar}}
+
+{{#if isLoading}}
+<div class="text-center mt-5">
+  <img src="../../img/loading.gif" alt="">
+</div>
+{{else}}
+
+ <div id="rooter" class="cover-container w-100 d-flex h-100 p-3 mx-auto flex-column">
+<form class="text-center p-5 form-layout" action="#" method="POST">
+
+            <p class="h4 mb-4">Sign in</p>
+
+            <input type="text" id="defaultRegisterFormUsername" name="username" class="form-control mb-4"
+                placeholder="Username">
+
+            <input type="password" id="defaultRegisterFormPassword" name="password" class="form-control"
+                placeholder="Password">
+            <hr>
+
+            <button class="btn btn-danger w-25 m-auto my-4 btn-block" type="submit">Sign in</button>
+
+        </form>
+</div>
+
+{{/if}}
+
+{{>notifications}}
